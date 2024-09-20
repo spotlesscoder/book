@@ -2,6 +2,7 @@ extern crate trpl; // required for mdbook test
 
 fn main() {
     // TODO: we'll add this next!
+    let _fut = page_title("TODO");
 }
 
 // ANCHOR: all

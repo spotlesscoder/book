@@ -106,7 +106,9 @@ common example of this kind of mix in real-world Rust code.
 <Listing number="17-TODO" caption="Sending messages with blocking code in a thread and awaiting the messages in an async block" file-name="src/main.rs">
 
 ```rust
-use std::thread;
+# extern crate trpl; // for mdbook test
+#
+use std::{thread, time::Duration};
 
 fn main() {
     let (tx, mut rx) = trpl::channel();

@@ -195,7 +195,7 @@ account for whether the page had a `<title>`.
 
 <Listing number="17-3" file-name="src/main.rs" caption="Calling the `page_title` function from `main` with a user-supplied argument">
 
-```rust
+```rust,ignore,does_not_compile
 {{#include ../listings/ch17-async-await/listing-17-03/src/main.rs:main}}
 ```
 
@@ -275,6 +275,8 @@ it is ready to try advancing this one again. This is an invisible state machine,
 as if you wrote something like this:
 
 ```rust
+# extern crate trpl; // required for mdbook test
+#
 enum PageTitleFuture<'a> {
     GetAwaitPoint {
         url: &'a str,
